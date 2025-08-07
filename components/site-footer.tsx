@@ -82,7 +82,7 @@ export function SiteFooter() {
                 Magic UI
               </span>
             </Link>
-            <p className="max-w-xs">UI Library for Design Engineers</p>
+            <p className="max-w-xs">Apply Pressure. Restore Surfaces.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-3">
             {footerNavs.map((nav) => (
