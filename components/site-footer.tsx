@@ -123,7 +123,7 @@ export function SiteFooter() {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Copyright © {new Date().getFullYear()}{" "}
             <Link href="/" className="cursor-pointer">
-              Magic UI
+              Apply Pressure AU®
             </Link>
             . All Rights Reserved.
           </span>
