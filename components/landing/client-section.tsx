@@ -21,6 +21,7 @@ export default function ClientSection() {
               <li>Pennant Hills</li>
               <li>Carlingford</li>
               <li>Winston Hills</li>
+              <li>Sydney-Wide available when inquired</li>
             </ul>
           </div>
         </div>
