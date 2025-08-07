@@ -99,13 +99,11 @@ export default function PricingSection() {
           </h4>
 
           <h2 className="text-5xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
-            Simple pricing for everyone.
+          💦 Pressure Washing Packages
           </h2>
 
           <p className="mt-6 text-xl leading-8 text-black/80 dark:text-white">
-            Choose an <strong>affordable plan</strong> that&apos;s packed with
-            the best features for engaging your audience, creating customer
-            loyalty, and driving sales.
+            Simple pricing <strong>Real results</strong> All service&apos;s include prep, pressure treatment, and clean-up.
           </p>
         </div>
 
