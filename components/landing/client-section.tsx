@@ -6,42 +6,21 @@ export default function ClientSection() {
     >
       <div className="py-14">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-          <h2 className="text-center text-sm font-semibold text-gray-600">
-          Proudly Serving These Sydney Suburbs
+          <h2 className="text-center text-sm font-semibold text-gray-600 uppercase tracking-wide">
+            Proudly Serving These Sydney Suburbs
           </h2>
           <div className="mt-6">
-            <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-16 [&_path]:fill-white">
-              <li>
-                <img
-                  src={`https://cdn.magicui.design/companies/Google.svg`}
-                  className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
-                />
-              </li>
-              <li>
-                <img
-                  src={`https://cdn.magicui.design/companies/Microsoft.svg`}
-                  className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
-                />
-              </li>
-              <li>
-                <img
-                  src={`https://cdn.magicui.design/companies/GitHub.svg`}
-                  className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
-                />
-              </li>
-
-              <li>
-                <img
-                  src={`https://cdn.magicui.design/companies/Uber.svg`}
-                  className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
-                />
-              </li>
-              <li>
-                <img
-                  src={`https://cdn.magicui.design/companies/Notion.svg`}
-                  className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
-                />
-              </li>
+            <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-lg font-medium text-gray-800 dark:text-gray-200">
+              <li>Oatlands</li>
+              <li>Parramatta</li>
+              <li>Ryde</li>
+              <li>Northmead</li>
+              <li>Baulkham Hills</li>
+              <li>Westmead</li>
+              <li>Castle Hill</li>
+              <li>Pennant Hills</li>
+              <li>Carlingford</li>
+              <li>Winston Hills</li>
             </ul>
           </div>
         </div>
