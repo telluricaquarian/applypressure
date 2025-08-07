@@ -27,9 +27,8 @@ export default function HeroSection() {
         <br className="hidden md:block" /> Keeping Sydney Clean.
       </h1>
       <p className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        Beautifully designed, animated components and templates built with
-        <br className="hidden md:block" /> Tailwind CSS, React, and Framer
-        Motion.
+      Sydney’s trusted surface restoration specialists.
+        <br className="hidden md:block" /> Pressure washing that protects property, enhances value, and leaves a lasting shine.
       </p>
       <Button className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white dark:text-black opacity-0 ease-in-out [--animation-delay:600ms]">
         <span>Get Started for free </span>
