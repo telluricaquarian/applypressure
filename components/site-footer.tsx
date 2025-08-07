@@ -79,7 +79,7 @@ export function SiteFooter() {
   className="h-8 w-8 object-contain"
 />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Magic UI
+                Apply Pressure AU®
               </span>
             </Link>
             <p className="max-w-xs">Apply Pressure. Restore Surfaces.</p>
