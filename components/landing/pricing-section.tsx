@@ -1,211 +1,100 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
-import { CheckIcon } from "@radix-ui/react-icons";
-import { motion } from "framer-motion";
-import { Loader } from "lucide-react";
-import { useState } from "react";
+import { buttonVariants } from "@/components/ui/button";
 
-type Interval = "month" | "year";
-
-export const toHumanPrice = (price: number, decimals: number = 2) => {
-  return Number(price / 100).toFixed(decimals);
-};
-const demoPrices = [
+const pricingPlans = [
   {
-    id: "price_1",
-    name: "Basic",
-    description: "A basic plan for startups and individual users",
+    name: "Surface Level",
+    price: "From $249",
+    description: "Ideal for homeowners wanting a quick freshen-up.",
     features: [
-      "AI-powered analytics",
-      "Basic support",
-      "5 projects limit",
-      "Access to basic AI tools",
+      "Driveway + Footpath",
+      "Light House Rinse",
+      "Patio Wash",
     ],
-    monthlyPrice: 1000,
-    yearlyPrice: 10000,
-    isMostPopular: false,
+    cta: "Book Now",
+    href: "/contact", // or "/#inquiry" if you have a section anchor
   },
   {
-    id: "price_2",
-    name: "Premium",
-    description: "A premium plan for growing businesses",
+    name: "Deep Cleanse",
+    price: "From $449",
+    description: "A full property rejuvenation for serious shine.",
     features: [
-      "Advanced AI insights",
-      "Priority support",
-      "Unlimited projects",
-      "Access to all AI tools",
-      "Custom integrations",
+      "Everything in Surface Level",
+      "Gutter Cleaning",
+      "Fence & Deck Wash",
+      "1st Floor Window Rinse",
     ],
-    monthlyPrice: 2000,
-    yearlyPrice: 20000,
-    isMostPopular: true,
+    cta: "Book Now",
+    href: "/contact",
+    highlight: true,
   },
   {
-    id: "price_5",
-    name: "Enterprise",
-    description:
-      "An enterprise plan with advanced features for large organizations",
+    name: "Seasonal Shield",
+    price: "$129/month",
+    description: "Set-and-forget quarterly cleanings year-round.",
     features: [
-      "Custom AI solutions",
-      "24/7 dedicated support",
-      "Unlimited projects",
-      "Access to all AI tools",
-      "Custom integrations",
-      "Data security and compliance",
+      "Quarterly Visits",
+      "Roof Soft Wash (1x/year)",
+      "Priority Scheduling",
+      "Discounted Add-Ons",
     ],
-    monthlyPrice: 5000,
-    yearlyPrice: 50000,
-    isMostPopular: false,
+    cta: "Join Plan",
+    href: "/contact",
   },
   {
-    id: "price_6",
-    name: "Ultimate",
-    description: "The ultimate plan with all features for industry leaders",
+    name: "Commercial Flow",
+    price: "Custom Quote",
+    description: "Tailored contracts for storefronts & commercial properties.",
     features: [
-      "Bespoke AI development",
-      "White-glove support",
-      "Unlimited projects",
-      "Priority access to new AI tools",
-      "Custom integrations",
-      "Highest data security and compliance",
+      "Storefront Pressure Washing",
+      "Oil Stain & Graffiti Removal",
+      "Monthly or Quarterly Contracts",
+      "Multi-site Property Support",
     ],
-    monthlyPrice: 8000,
-    yearlyPrice: 80000,
-    isMostPopular: false,
+    cta: "Request Quote",
+    href: "/contact",
   },
 ];
 
 export default function PricingSection() {
-  const [interval, setInterval] = useState<Interval>("month");
-  const [isLoading, setIsLoading] = useState(false);
-  const [id, setId] = useState<string | null>(null);
-
-  const onSubscribeClick = async (priceId: string) => {
-    setIsLoading(true);
-    setId(priceId);
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate a delay
-    setIsLoading(false);
-  };
-
   return (
-    <section id="pricing">
-      <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <h4 className="text-xl font-bold tracking-tight text-black dark:text-white">
-            Pricing
-          </h4>
+    <section id="pricing" className="w-full py-20 bg-background">
+      <div className="mx-auto max-w-6xl px-6 text-center">
+        <h2 className="text-4xl font-bold text-primary">Apply Pressure Packages</h2>
+        <p className="mt-4 text-muted-foreground">
+          Choose the right level of clean. From one-time refreshes to seasonal service.
+        </p>
 
-          <h2 className="text-5xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
-          💦 Pressure Washing Packages
-          </h2>
-
-          <p className="mt-6 text-xl leading-8 text-black/80 dark:text-white">
-            Simple pricing <strong>Real results</strong> All service&apos;s include prep, pressure treatment, and clean-up.
-          </p>
-        </div>
-
-        <div className="flex w-full items-center justify-center space-x-2">
-          <Switch
-            id="interval"
-            onCheckedChange={(checked) => {
-              setInterval(checked ? "year" : "month");
-            }}
-          />
-          <span>Annual</span>
-          <span className="inline-block whitespace-nowrap rounded-full bg-black px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white dark:bg-white dark:text-black">
-            2 MONTHS FREE ✨
-          </span>
-        </div>
-
-        <div className="mx-auto grid w-full justify-center sm:grid-cols-2 lg:grid-cols-4 flex-col gap-4">
-          {demoPrices.map((price, idx) => (
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {pricingPlans.map((plan, idx) => (
             <div
-              key={price.id}
+              key={idx}
               className={cn(
-                "relative flex max-w-[400px] flex-col gap-8 rounded-2xl border p-4 text-black dark:text-white overflow-hidden",
-                {
-                  "border-2 border-[var(--color-one)] dark:border-[var(--color-one)]":
-                    price.isMostPopular,
-                }
+                "rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:shadow-md",
+                plan.highlight && "border-primary shadow-lg"
               )}
             >
-              <div className="flex items-center">
-                <div className="ml-4">
-                  <h2 className="text-base font-semibold leading-7">
-                    {price.name}
-                  </h2>
-                  <p className="h-12 text-sm leading-5 text-black/70 dark:text-white">
-                    {price.description}
-                  </p>
-                </div>
-              </div>
-
-              <motion.div
-                key={`${price.id}-${interval}`}
-                initial="initial"
-                animate="animate"
-                variants={{
-                  initial: {
-                    opacity: 0,
-                    y: 12,
-                  },
-                  animate: {
-                    opacity: 1,
-                    y: 0,
-                  },
-                }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.1 + idx * 0.05,
-                  ease: [0.21, 0.47, 0.32, 0.98],
-                }}
-                className="flex flex-row gap-1"
-              >
-                <span className="text-4xl font-bold text-black dark:text-white">
-                  $
-                  {interval === "year"
-                    ? toHumanPrice(price.yearlyPrice, 0)
-                    : toHumanPrice(price.monthlyPrice, 0)}
-                  <span className="text-xs"> / {interval}</span>
-                </span>
-              </motion.div>
-
-              <Button
+              <h3 className="text-2xl font-semibold text-primary">{plan.name}</h3>
+              <p className="mt-2 text-3xl font-bold">{plan.price}</p>
+              <p className="mt-1 text-muted-foreground text-sm">{plan.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-left">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="before:mr-2 before:content-['✔️']">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={plan.href}
                 className={cn(
-                  "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2"
+                  buttonVariants({ size: "lg", variant: plan.highlight ? "default" : "outline" }),
+                  "mt-6 block w-full text-center rounded-xl"
                 )}
-                disabled={isLoading}
-                onClick={() => void onSubscribeClick(price.id)}
               >
-                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-                {(!isLoading || (isLoading && id !== price.id)) && (
-                  <p>Subscribe</p>
-                )}
-
-                {isLoading && id === price.id && <p>Subscribing</p>}
-                {isLoading && id === price.id && (
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                )}
-              </Button>
-
-              <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0" />
-              {price.features && price.features.length > 0 && (
-                <ul className="flex flex-col gap-2 font-normal">
-                  {price.features.map((feature: any, idx: any) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-3 text-xs font-medium text-black dark:text-white"
-                    >
-                      <CheckIcon className="h-5 w-5 shrink-0 rounded-full bg-green-400 p-[2px] text-black dark:text-white" />
-                      <span className="flex">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {plan.cta}
+              </a>
             </div>
           ))}
         </div>
