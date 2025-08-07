@@ -31,7 +31,7 @@ export default function HeroSection() {
         <br className="hidden md:block" /> Pressure washing that protects property, enhances value, and leaves a lasting shine.
       </p>
       <Button className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white dark:text-black opacity-0 ease-in-out [--animation-delay:600ms]">
-        <span>Get Started for free </span>
+        <span>Get Quotation/Inspection </span>
         <ArrowRightIcon className="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
       </Button>
       <div
