@@ -14,7 +14,7 @@ const pricingPlans = [
       "Patio Wash",
     ],
     cta: "Book Now",
-    href: "/contact", // or "/#inquiry" if you have a section anchor
+    href: "/contact",
   },
   {
     name: "Deep Cleanse",
@@ -72,25 +72,27 @@ export default function PricingSection() {
             <div
               key={idx}
               className={cn(
-                "rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:shadow-md",
+                "flex flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:shadow-md",
                 plan.highlight && "border-primary shadow-lg"
               )}
             >
-              <h3 className="text-2xl font-semibold text-primary">{plan.name}</h3>
-              <p className="mt-2 text-3xl font-bold">{plan.price}</p>
-              <p className="mt-1 text-muted-foreground text-sm">{plan.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-left">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="before:mr-2 before:content-['✔️']">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <h3 className="text-2xl font-semibold text-primary">{plan.name}</h3>
+                <p className="mt-2 text-3xl font-bold">{plan.price}</p>
+                <p className="mt-1 text-muted-foreground text-sm">{plan.description}</p>
+                <ul className="mt-4 space-y-2 text-sm text-left">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="before:mr-2 before:content-['✔️']">
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <a
                 href={plan.href}
                 className={cn(
                   buttonVariants({ size: "lg", variant: plan.highlight ? "default" : "outline" }),
-                  "mt-6 block w-full text-center rounded-xl"
+                  "mt-6 w-full text-center rounded-xl"
                 )}
               >
                 {plan.cta}
