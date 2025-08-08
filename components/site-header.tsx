@@ -141,7 +141,7 @@ export function SiteHeader() {
         >
           <div className="container mx-auto flex h-[var(--navigation-height)] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              Magic UI
+              Apply Pressure AU®
             </Link>
 
             <button
