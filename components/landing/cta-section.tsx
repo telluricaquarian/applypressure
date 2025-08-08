@@ -5,22 +5,23 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { motion, useAnimation, useInView } from "motion/react";
 import {
-  FaPumpSoap,
-  FaToilet,
-  FaSprayCan,
-  FaShower,
-  FaBroom,
-  FaHandsWash,
-} from "react-icons/fa";
+  BarChart,
+  ChevronRight,
+  File,
+  Globe,
+  HeartHandshake,
+  Rss,
+  Shield,
+} from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 
 const tiles = [
-  { icon: <FaPumpSoap className="size-full" /> },
-  { icon: <FaToilet className="size-full" /> },
-  { icon: <FaSprayCan className="size-full" /> },
-  { icon: <FaShower className="size-full" /> },
-  { icon: <FaBroom className="size-full" /> },
-  { icon: <FaHandsWash className="size-full" /> },
+  { icon: <HeartHandshake className="size-full" /> },
+  { icon: <Globe className="size-full" /> },
+  { icon: <File className="size-full" /> },
+  { icon: <Shield className="size-full" /> },
+  { icon: <Rss className="size-full" /> },
+  { icon: <BarChart className="size-full" /> },
 ].map((tile) => ({
   ...tile,
   bg: (
@@ -112,11 +113,11 @@ export default function CallToActionSection() {
             </Marquee>
             <div className="absolute z-10">
               <div className="mx-auto size-24 rounded-[2rem] border bg-background/10 p-3 shadow-2xl backdrop-blur-md dark:bg-background/10 lg:size-32">
-                <FaPumpSoap className="mx-auto size-16 text-foreground dark:text-foreground lg:size-24" />
+                <HeartHandshake className="mx-auto size-16 text-foreground dark:text-foreground lg:size-24" />
               </div>
               <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
-                <h1 className="text-3xl font-bold lg:text-4xl">Apply Pressure. Restore Surfaces.</h1>
-                <p className="mt-2">It's Time to Clean.</p>
+                <h1 className="text-3xl font-bold lg:text-4xl">Stop wasting time on design.</h1>
+                <p className="mt-2">Start your 7-day free trial. No credit card required.</p>
                 <a
                   href="/"
                   className={cn(
