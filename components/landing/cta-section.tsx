@@ -114,7 +114,7 @@ export default function CallToActionSection() {
             <div className="absolute z-10">
               <div className="mx-auto size-24 rounded-[2rem] border bg-background/10 p-3 shadow-2xl backdrop-blur-md dark:bg-background/10 lg:size-32">
               <img
-  src="/AP.png"
+  src="/AP..png"
   alt="Apply Pressure AU Logo"
   className="mx-auto size-16 lg:size-24 object-contain"
 />
