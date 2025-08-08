@@ -15,19 +15,19 @@ import {
 } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 
-const tiles = [
-  { icon: <HeartHandshake className="size-full" /> },
-  { icon: <Globe className="size-full" /> },
-  { icon: <File className="size-full" /> },
-  { icon: <Shield className="size-full" /> },
-  { icon: <Rss className="size-full" /> },
-  { icon: <BarChart className="size-full" /> },
-].map((tile) => ({
-  ...tile,
+const tiles = Array.from({ length: 6 }, () => ({
+  icon: (
+    <img
+      src="/rounded.png"
+      alt="Apply Pressure AU Logo"
+      className="size-full object-contain"
+    />
+  ),
   bg: (
     <div className="pointer-events-none absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-[#7EC8E3] via-[#4A90E2] to-[#2D6ADF] opacity-70 blur-[20px] filter"></div>
   ),
 }));
+
 
 const shuffleArray = (array: any[]) => {
   let currentIndex = array.length,
