@@ -115,8 +115,8 @@ export default function CallToActionSection() {
                 <FaPumpSoap className="mx-auto size-16 text-foreground dark:text-foreground lg:size-24" />
               </div>
               <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
-                <h1 className="text-3xl font-bold lg:text-4xl">Stop wasting time on design.</h1>
-                <p className="mt-2">Start your 7-day free trial. No credit card required.</p>
+                <h1 className="text-3xl font-bold lg:text-4xl">Apply Pressure. Restore Surfaces.</h1>
+                <p className="mt-2">It's Time to Clean.</p>
                 <a
                   href="/"
                   className={cn(
