@@ -101,16 +101,19 @@ export function SiteHeader() {
         <div className="container mx-auto flex h-[var(--navigation-height)] w-full items-center justify-between">
           <Link className="text-md flex items-center justify-center" href="/">
             APAU®
-            <Link
-  href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mr-6 text-sm px-4 py-2 rounded-lg text-white"
-  style={{ backgroundColor: "#1f26d4" }}
->
-  Get Quote
-</Link>
+          </Link>
 
+          <div className="ml-auto flex h-full items-center">
+  <a
+    href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mr-6 text-sm px-4 py-2 rounded-lg text-white transition-colors duration-200 hover:brightness-110"
+    style={{ backgroundColor: "#1f26d4" }}
+  >
+    Get Quote
+  </a>
+</div>
             <Link
               className={cn(
                 buttonVariants({ variant: "secondary" }),
