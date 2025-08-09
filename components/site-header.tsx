@@ -101,12 +101,16 @@ export function SiteHeader() {
         <div className="container mx-auto flex h-[var(--navigation-height)] w-full items-center justify-between">
           <Link className="text-md flex items-center justify-center" href="/">
             APAU®
-          </Link>
+            <Link
+  href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mr-6 text-sm px-4 py-2 rounded-lg text-white"
+  style={{ backgroundColor: "#1f26d4" }}
+>
+  Get Quote
+</Link>
 
-          <div className="ml-auto flex h-full items-center">
-            <Link className="mr-6 text-sm" href="/signin">
-              Get Quote
-            </Link>
             <Link
               className={cn(
                 buttonVariants({ variant: "secondary" }),
@@ -141,7 +145,7 @@ export function SiteHeader() {
         >
           <div className="container mx-auto flex h-[var(--navigation-height)] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              Apply Pressure AU®
+              APAU®
             </Link>
 
             <button
