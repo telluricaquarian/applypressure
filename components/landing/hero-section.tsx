@@ -32,18 +32,20 @@ export default function HeroSection() {
       </p>
       <RainbowButton
   asChild
-  className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white ease-in-out [--animation-delay:600ms] group"
+  className="inline-flex h-11 px-6 gap-1 rounded-lg group translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]"
 >
   <a
     href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Book a free quotation or inspection"
+    className="text-black font-medium"   // <-- make text visible on white pill
   >
     Get Quotation/Inspection
     <ArrowRightIcon className="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
   </a>
 </RainbowButton>
+
       <div
         ref={ref}
         className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px] after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,var(--background)_30%,transparent)]"
