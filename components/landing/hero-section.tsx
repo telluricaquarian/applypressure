@@ -32,7 +32,7 @@ export default function HeroSection() {
       </p>
       <RainbowButton
   asChild
-  className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] group"
+  className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white ease-in-out [--animation-delay:600ms] group"
 >
   <a
     href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
