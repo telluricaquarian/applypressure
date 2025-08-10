@@ -54,8 +54,8 @@ const pricingPlans = [
       "Multi-site Property Support",
     ],
     cta: "Request Quote",
-    href: "/contact",
-  },
+    href: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2kZ131ihts9G20Gd8PM4NHDToUlnOxpMvAGMghYFo-GYP14E4PEZ04p2qIZ9xnpbqs57JITD8I",
+},
 ];
 
 export default function PricingSection() {
