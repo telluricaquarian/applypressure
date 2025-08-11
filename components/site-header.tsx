@@ -104,9 +104,14 @@ export function SiteHeader() {
           </Link>
 
           <div className="ml-auto flex h-full items-center">
-            <Link className="mr-6 text-sm" href="/signin">
-              Get Quote
-            </Link>
+          <Link
+  className="mr-6 text-sm bg-[#1f26d4] text-white px-4 py-2 rounded-md hover:opacity-90 transition"
+  href="https://calendar.app.google/7kUoV1FY34Q2An6b8"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Get Quote
+</Link>
             <Link
               className={cn(
                 buttonVariants({ variant: "secondary" }),
