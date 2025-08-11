@@ -112,15 +112,15 @@ export function SiteHeader() {
 >
   Get Quote
 </Link>
-            <Link
-              className={cn(
-                buttonVariants({ variant: "secondary" }),
-                "mr-6 text-sm"
-              )}
-              href="/signup"
-            >
-              Sign up
-            </Link>
+<a
+  href="#pricing"
+  className={cn(
+    buttonVariants({ variant: "secondary" }),
+    "mr-6 text-sm"
+  )}
+>
+  Pricing
+</a>
           </div>
           <button
             className="ml-6 md:hidden"
